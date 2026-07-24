@@ -1,0 +1,64 @@
+# =========================================================
+# Perform the experiments of the paper on the synthetic
+# images.
+#
+# The 3D images representing the edge surfaces
+# with Sobel filters and Ek filters have already been 
+# generated with script ./make_synt_edges
+# Here the files are not created, but the process is
+# executed again to measure the running time (the option
+# NOOUT disables writing the output 3D image).
+#
+# Each edge extraction process is executed 10 times, in 
+# such a way that the shortest time cab be taken.
+# Each execution gives a file, the files are numbered
+# 1 2 3 ... 10.
+#
+# The running times, obtained on my computer (Lenovo B5-30
+# with Intel Core I5-446OT x 4 running Python 3.12.3 under 
+# Linux Ubuntu 24.04.3 LTS operating system) are already
+# present in this directory SyntTimes.
+#
+# If you want to measure the running times on your
+# computer, first place this script in the parent directory
+# (where the programs are).
+# =========================================================
+
+P="SyntImages/avg_5_"
+
+for S in {"axis","slanted","sphere"}
+do
+  echo ""
+  echo "==== Running 10 times on "$S 
+  for M in {"Sobel","EK"}
+  do 
+    for i in {1..10..1}
+    do
+      echo $M"_"$S"_"$i
+      python3 -m cProfile optimized.py $P$S".vtk" $M NOOUT > log
+      grep optimized log > t1
+      grep image3D log > t2
+      cat t1 t2 > "time_"$M"_"$S"_"$i".txt"
+
+      echo $M"_noisy_016"$S"_"$i
+      python3 -m cProfile optimized.py $P"noisy_"$S"_016.vtk" $M NOOUT > log
+      grep optimized log > t1
+      grep image3D log > t2
+      cat t1 t2 > "time_"$M"_noisy_"$S"_016_"$i".txt"
+
+      echo $M"_noisy_032"$S"_"$i
+      python3 -m cProfile optimized.py $P"noisy_"$S"_032.vtk" $M NOOUT > log
+      grep optimized log > t1
+      grep image3D log > t2
+      cat t1 t2 > "time_"$M"_noisy_"$S"_032_"$i".txt"
+
+      echo $M"_noisy_064"$S"_"$i
+      python3 -m cProfile optimized.py $P"noisy_"$S"_064.vtk" $M NOOUT > log
+      grep optimized log > t1
+      grep image3D log > t2
+      cat t1 t2 > "time_"$M"_noisy_"$S"_064_"$i".txt"
+    done
+  done
+done
+
+# =========================================================
