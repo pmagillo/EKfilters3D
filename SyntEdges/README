@@ -1,0 +1,3 @@
+This directory contains the edge surfaces (3D images with classification of each voxe) 
+computed from the synthetic images in ../SyntImages by using classic Sobel filters 
+(files with prefix "Sobel_") and our EK filters (files with prefix "EK_").
