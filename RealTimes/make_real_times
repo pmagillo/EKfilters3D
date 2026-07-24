@@ -1,0 +1,51 @@
+# =========================================================
+# Perform the experiments of the paper on the real images.
+#
+# First the input 3D images must have been generated and
+# placed in directory ../RealImages, instructions to do
+# this are in that directory.
+#
+# The 3D images representing the edge surfaces
+# with Sobel filters and EK filters must be
+# generated with script make_real_edges
+# contained in directory ../RealEdges.
+#
+# Here the files are not created, but the process is
+# executed again to measure the running time (the option
+# NOOUT disables writing the output 3D image).
+#
+# Each edge extraction process is executed 10 times, in 
+# such a way that the shortest time cab be taken.
+# Each execution gives a file, the files are numbered
+# 1 2 3 ... 10.
+#
+# The running times, obtained on my computer (Lenovo B5-30
+# with Intel Core I5-446OT x 4 running Python 3.12.3 under 
+# Linux Ubuntu 24.04.3 LTS operating system) are already
+# present in this directory SyntTimes.
+#
+# If you want to measure the running times on your
+# computer, first place this script in the parent directory
+# (where the programs are).
+# Remark: the files are big and the execution of the
+# script takes time.....
+# =========================================================
+
+P="RealImages/avg_5_"
+
+for S in {"ctheadZ","mrbrainZ","beetle","present","tree"}
+do
+  echo ""
+  echo "==== Running 10 times on "$S 
+  for M in {"Sobel","EK"}
+  do 
+    for i in {1..10..1}
+    do
+      echo $M"_"$S"_"$i
+      python3 -m cProfile optimized.py $P$S".vtk" $M NOOUT > log
+      grep optimized log > t1
+      grep image3D log > t2
+      cat t1 t2 > "time_"$M"_"$S"_"$i".txt"
+    done
+  done
+done
