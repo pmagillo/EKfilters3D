@@ -1,0 +1,140 @@
+===== DATA =====
+
+All the 3D images are in VTK format, a format used by the Paraview
+visualization tool (https://www.paraview.org/).
+
+SyntImages
+ It contains the synthetic images images used in the experiments of the paper.
+ These images have been generated with a script, which is provided, but there
+ is no need to run it again.
+
+SyntEdges
+ It contains the generated edge surfaces for the synthetic images.
+ These results have been generated with a script, which is provided, but there
+ is no need to run it again.
+
+SyntMeasures
+ It contains saved values of precision and recall describing how the
+ extracted edge surfaces with Sobel and EK filters are similar to the ideal
+ edge surfaces of the synthetic images.
+ The directory contains also a program, Fmeasure_plot.py, which 
+ graphically presents F-measure (a combination of precision and recall).
+
+SyntTimes
+ It contains saved running times on synthetic images.
+ The times are reasured on my computer (details in the readme file), and you
+ may want to measure them on yours. For this, you can run the script provided
+ in there.
+ The directory contains also a program, plot_times.py, which 
+ presents the running times graphically.
+
+RealImages
+ It should contain the real images used in the experiments of the paper, but
+ such images are too big for uploading.
+ It contains instructions to generate them from the data that must be
+ downloaded from the indicated websites.
+
+RealEdges
+ It should contain the edge surfaces for the real images, but the files are
+ too big for uploading.
+ It contains instructions to generate them from the 3D images (such images must
+ first be created according to the instructions in directory RealImages).
+
+RealTimes
+ It contains saved running times on real images.
+ The times are reasured on my computer (details in the readme file), and you
+ may want to measure them on yours. For this, you can run the script provided
+ in there.
+ The directory contains also a program, print_times.py, which 
+ presents the running times in a human-readable format.
+
+===== PROGRAMS =====
+
+image3D.py  vtkio3D.py
+ Class for a 3D image and functions to read and write a 3D image in VTK
+ format.
+
+synthetic.py
+ Generate the synthetic images. The generated noisless images are equal at
+ each run. The generated noisy images are different at each run because the
+ noise is placed randomly.
+ The already generated images (after smoothing) are in directory SyntImages.
+
+average.py 
+ Smooth an image by replacing the value at each voxel with an average of
+ its 5x5x5 neighbors (including the voxel itself).
+
+true_edges.py
+ Generate the ideal edge surfaces for the synthetic images.
+
+optimized.py
+ Perform edge detection with Sobel or with EK filters.
+ The computation is optimized: it performs only those multiplications that
+ have a non-zero coefficient (instead of 27 multiplications for each pixel).
+
+compare_edges_plot.py
+ Create the plots comparing the values given by Sobel and EK filter to
+ the voxels of the synthetic images.
+ It is necessary to have first created the data (by running 
+ make_synthetic to generate the images, make_ideal to generate the
+ ideal edge surfaces, and make_synt_edges to generate the edge surfaces
+ through Sobel and EK filters).
+
+compare_vtk.py
+ Create a VTK file with different values for the different outcome of
+ the comparison between values given by Sobel and EK filter to the voxels
+ of an image.
+ The output VTK image can be visualized in paraview by extracting the
+ voxels with value >0 and using a suitable colore scale.
+
+precision_recall.py
+ Compare the values computed from the synthetic images by the Sobel and EK
+ filter with the ideal edge surfaces, compute the values of precision and recall
+ and write them to a file.
+
+===== SCRIPTS =====
+
+Such scripts are provided in the various directory to repeat the
+experiments. Tnis is not necessary for synthetic images (the files are
+provided) but is necessary for real ones. 
+
+SyntImages/make_synthetic
+ Script to generate the synthetic images. It is provided with the purpose
+ of documentation, as the synthetic images are already contained in
+ directory SyntImages and it is not necessary to generate them again.
+ 
+SyntEdges/make_ideal
+ Script to generate the ideal edge surfaces for the synthetic images.
+ It is provided with the purpose of documentation, as such ideal edge
+ surfaces are already contained in directory SyntEdges and it is not necessary
+ to generate them again.
+
+SyntEdges/make_synt_edges
+ Script to generate the edge surfaces from the synthetic images (clean
+ and with noise).
+ It is provided with the purpose of documentation, as such edge surfaces
+ surfaces are already contained in directory SyntEdges.
+
+SyntTimes/make_synt_times
+ Same computation as make_synt_edges, but run each computation 10 times,
+ do not save the output image, and save a file with the running times.
+ This has been done and the files with times are in directory SyntTimes,
+ but you probably want to measure the times again on your computer.
+
+SyntMeasures/make_synt_measure
+ Run precision_recall.py for each synthetic image (clean and noisy
+ versions) and save the output to files.
+ This has been done and the files with precision and recall values are
+ in directory SyntMeasures.
+
+RealEdges/make_real_edges
+ Script to generate the edge surfaces from the real images.
+ Such edge surfaces are not provided, so you should generate them.
+ First, you should generate the input images and place them in
+ directory RealImages (see instructions there).
+
+RealTimes/make_real_times
+ Same computation as make_real_edges, but run each computation 10 times,
+ do not save the output image, and save a file with the running times.
+ This has been done and the files with times are in directory RealTimes,
+ but you probably want to measure the times again on your computer.
