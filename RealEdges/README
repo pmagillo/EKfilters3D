@@ -1,0 +1,19 @@
+This directory is for containing the edge surfaces extrtacted from the real images in ../RealImages.
+The files are too big and have not been uploaded.
+
+The script make_real_edges (which must be moved to the parent directory for running) will create them.
+First you should have populated the directory ../RealImages with the input 3D images according to the instructions provided there.
+
+After that, you will have the files
+EK_avg_5_beetle.vtk
+EK_avg_5_present.vtk 
+EK_avg_5_tree.vtk
+EK_avg_5_ctheadZ.vtk
+EK_avg_5_mrbrainZ.vtk 
+and
+Sobel_avg_5_present.vtk
+Sobel_avg_5_beetle.vtk
+Sobel_avg_5_tree.vtk  
+Sobel_avg_5_ctheadZ.vtk
+Sobel_avg_5_mrbrainZ.vtk
+containing the edge surfaces obtained by appling the EK filters and the Sobel filters.
