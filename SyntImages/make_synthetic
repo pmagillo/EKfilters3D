@@ -1,0 +1,52 @@
+# =========================================================
+# Generate the synthetic test images used in the paper.
+#
+# The directory SyntImages contains the already 
+# generated images, so it should not be necessary to
+# run this script.
+#
+# If you want to run this script, you should first place it
+# in the parent directory, where the python programs are.
+# The following files will be generated, which represent 3d
+# images in vtk format:
+#
+# axis.vtk
+# avg_5_axis.vtk
+# avg_5_noisy_axis_016.vtk
+# avg_5_noisy_axis_032.vtk
+# avg_5_noisy_axis_064.vtk
+# slanted.vtk
+# avg_5_slanted.vtk
+# avg_5_noisy_slanted_016.vtk
+# avg_5_noisy_slanted_032.vtk
+# avg_5_noisy_slanted_064.vtk
+# sphere.vtk
+# avg_5_sphere.vtk
+# avg_5_noisy_sphere_016.vtk
+# avg_5_noisy_sphere_032.vtk
+# avg_5_noisy_sphere_064.vtk
+#
+# The noisy images will be different at each run, because
+# the noise is random.
+# 
+# =========================================================
+
+for S in {"axis","slanted","sphere"}
+do 
+  echo "Generate images for "$S
+  # ==== clean image
+  #      sharp image 
+  python3 synthetic.py $S 0
+  #      smoothed image
+  python3 average.py $S".vtk" 5
+  # ==== noisy images with variance 16,32,64
+  for N in {"16","32","64"}
+  do 
+    #    sharp image
+    python3 synthetic.py $S $N
+    #      smoothed image
+    python3 average.py "noisy_"$S"_0"$N".vtk" 5
+  done
+done
+
+# =========================================================
