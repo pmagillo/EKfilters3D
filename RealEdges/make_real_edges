@@ -1,0 +1,25 @@
+# =========================================================
+# Perform the experiments of the paper on the real
+# images to generate the 3D images representing the edge
+# surfaces with Sobel filters and EK filters.
+#
+# This script extracts the edges and saves the results.
+# For running it, you must place it in the parent directory.
+#
+# The directory RealEdges is for containing the
+# generated edge surfaces, so you should move here the files
+# obtained by running this script, which are named
+# EK_avg_5_*.vtk
+# Sobel_avg_5_*.vtk
+# =========================================================
+
+for N in {"beetle","present","tree","ctheadZ","mrbrainZ"}
+do
+  # Smooth the image (this has already been done)
+  # python3 average.py "RealImages/"$N".vtk"
+  # Compute edge surfaces
+  python3 optimized.py "RealImages/avg_5_"$N".vtk" Sobel 
+  python3 optimized.py "RealImages/avg_5_"$N".vtk" EK
+done
+
+# =========================================================
