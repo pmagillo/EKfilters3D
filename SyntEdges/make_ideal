@@ -1,0 +1,28 @@
+# =========================================================
+# Generate the ground truth (ideal edge surfaces) for
+# the synthetic test images used in the paper.
+#
+# The directory SyntEdges contains the already 
+# generated ideal edge surfaces, so it should not be 
+# necessary to run this script.
+#
+# If you want to run this script, you should first place it
+# in the parent directory, where the python programs are.
+# The following files will be generated, which represent 3d
+# images in vtk format:
+#
+# ideal_axis.vtk
+# ideal_slanted.vtk
+# ideal_sphere.vtk
+# =========================================================
+
+for S in {"axis","slanted","sphere"}
+do 
+  echo "Generate images for "$S
+  # ==== create clean image (sharp, not smoothed)
+  python3 synthetic.py $S 0
+  # ==== create ideal surface
+  python3 true_edges.py $S".vtk" "ideal_"$S".vtk"
+done
+
+# =========================================================
