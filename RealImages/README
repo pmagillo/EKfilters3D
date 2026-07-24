@@ -1,0 +1,19 @@
+This directory contains the real 3D images.
+
+The following 3D images are from TU Wien University:
+beetle.vtk
+present.vtk
+tree.vtk
+Reference: https://www.cg.tuwien.ac.at/research/vis/datasets/
+
+The following 3D images are from Stanford University:
+ctheadZ.vtk
+mrbrainZ.vtk
+after adding a layer of voxels between any consecutive layers along
+the z-direction. This has been done because z-spacing was double than
+x- and y-spacing. The greylevels of the inserted layers are interpolated.
+Reference: https://graphics.stanford.edu/data/voldata/
+
+For all such images, the version avg_5_*.vtk
+is the result of smooting the image by using program ../average.py 
+with neighborhhod size 5x5x5.
