@@ -1,0 +1,1 @@
+This directory contains the (clean and noisy) synthetic images created with ../synthetic.py and their smoothed version after processing them with ../average.py
