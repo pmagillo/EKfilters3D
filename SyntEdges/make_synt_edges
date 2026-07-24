@@ -1,0 +1,39 @@
+# =========================================================
+# Perform the experiments of the paper on the synthetic
+# images to generate the 3D images representing the edge
+# surfaces with Sobel filters and EK filters.
+#
+# Extract the edge surfaces and save the results.
+#
+# The directory SyntEdges contains the already 
+# generated edge surfaces, so it should not be 
+# necessary to run this script.
+#
+# If you want to run this script, you should first place it
+# in the parent directory, where the python programs are.
+#
+# The following files will be generated, which are 3D images
+# representing the edge surfaces, in vtk format:
+#
+# EK_avg_5_*.vtk
+# Sobel_avg_5_*.vtk
+# =========================================================
+
+P="SyntImages/avg_5_"
+
+for S in {"axis","slanted","sphere"}
+do 
+  echo ""
+  echo "==== Generate edge images for "$S
+  for M in {"Sobel","EK"}
+  do 
+    # compute edges from clean (smoothed) image
+    python3 optimized.py $P$S".vtk" $M
+    # compute edges from noisy (smoothed) images
+    python3 optimized.py $P"noisy_"$S"_016.vtk" $M
+    python3 optimized.py $P"noisy_"$S"_032.vtk" $M
+    python3 optimized.py $P"noisy_"$S"_064.vtk" $M
+  done
+done
+
+# =========================================================
