@@ -1,0 +1,8 @@
+This file contains the running times of executing the edge extraction process
+by using traditional Sobel filters and our EK filters.
+The times are taken in a Lenovo B5-30 with Intel Core I5-446OT x 4
+running Python 3.12.3 under Linux Ubuntu 24.04.3 LTS operating system.
+
+A script  make_synt_times  is provided to run the same experiments again.
+
+The program  plot_times.py  is provided to visually present the running times. 
