@@ -1,19 +1,41 @@
-This directory contains the real 3D images.
+This directory is for containing the real 3D images.
 
-The following 3D images are from TU Wien University:
+The images in vtk format have not been uploaded because they are too big.
+Here are the instructions to generate them.
+
+A) Images from TU Wien University:
+https://www.cg.tuwien.ac.at/research/vis/datasets/
+Download the data and convert them to vtk format. Conversion is performed by program  dat2vtk.py,
+see inside for instructions.
+You get the three files
 beetle.vtk
 present.vtk
 tree.vtk
-Reference: https://www.cg.tuwien.ac.at/research/vis/datasets/
 
-The following 3D images are from Stanford University:
+B) Images from Stanford University:
+https://graphics.stanford.edu/data/voldata/
+Download the data, convert to vtk format (stage 1), and add slices along z-direction (stage 2).
+The addition of a layer of voxels between any consecutive layers along
+the z-direction is necessary because z-spacing was double than
+x- and y-spacing (the greylevels of the inserted layers are interpolated).
+The two stages are performed by the programs  decode.py (stage 1) and  addsliceZ.py (stage 2). 
+See inside for instructions.
+You get the three files
 ctheadZ.vtk
 mrbrainZ.vtk
-after adding a layer of voxels between any consecutive layers along
-the z-direction. This has been done because z-spacing was double than
-x- and y-spacing. The greylevels of the inserted layers are interpolated.
-Reference: https://graphics.stanford.edu/data/voldata/
 
-For all such images, the version avg_5_*.vtk
-is the result of smooting the image by using program ../average.py 
-with neighborhhod size 5x5x5.
+C) After generating the images, you have to smooth them by running the program average.py (located in the parent directory)
+with neighborhhod size 5x5x5. The commands are:
+python3 average.py beetle.vtk" 5
+python3 average.py present.vtk" 5
+python3 average.py tree.vtk" 5
+python3 average.py ctheadZ.vtk" 5
+python3 average.py mrbrainZ.vtk" 5
+
+You will get the same images with prefix "avg_5_", that is
+avg_5_beetle.vtk
+avg_5_present.vtk
+avg_5_tree.vtk
+avg_5_ctheadZ.vtk
+avg_5_mrbrainZ.vtk
+These images will be the input for generating the edge surfaces.
