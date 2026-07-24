@@ -1,0 +1,65 @@
+Here are the instructions to generate the plots present in the paper.
+
+Figure 6:
+This figure compares the values given to the voxels by the Sobel filters
+and the EK filters, and both with the values of the ideal edge surfaces
+(ground truth) on each of the three synthetic images.
+For A = axis, slanted, sphere 
+run
+python3 compare_edges_plot.py SyntEdges/ideal_A.vtk SyntEdges/Sobel_avg_5_A.vtk SyntEdges/EK_avg_5_A.vtk
+
+Figure 7:
+This figure presents the F-measure, combining precision and recall, for the
+three synthetic images.
+Enter directory SyntMeasures/
+and run
+python3 Fmeasure_plot.py
+
+Figure 8:
+For each A = axis, slanted, sphere, this figure contains of 
+-column 1 showing the ideal edge surface
+-columns 2,3,4,5 comparing the obtained edge surfaces from Sobel and Ek
+filters on the clean image and the three noisy images.
+Column 1:
+ visualize SyntEdges/ideal_A.vtk 
+Column 2:
+ run
+ python3 compare_vtk.py 128 SyntEdges/Sobel_avg_5_A.vtk SyntEdges/EK_avg_5_A.vtk
+ and visualize the generated output.vtk
+Column 3: 
+ same as 2 with Sobel_avg_5_noisy_A_016.vtk EK_avg_5_noisy_A_016.vtk
+Column 4:
+ same as 2 with Sobel_avg_5_noisy_A_032.vtk EK_avg_5_noisy_A_032.vtk
+Column 5:
+ same as 2 with Sobel_avg_5_noisy_A_064.vtk EK_avg_5_noisy_A_064.vtk
+
+Figure 9:
+This is similar to Figure 8, columns 2,3,4,5 but using the real images
+  RealEdges/Sobel_avg_5_ctheadZ.vtk  RealEdges/EK_avg_5_ctheadZ.vtk
+  RealEdges/Sobel_avg_5_mrbrainZ.vtk RealEdges/EK_avg_5_mrbrainZ.vtk
+and visualizing a slice.
+But, as the images are big, it is convenient first to slice the image
+and then load just the slice.
+
+Figure 10:
+This is similar to Figure 8, columns 2,3,4,5 but using the real images
+  RealEdges/Sobel_avg_5_present.vtk RealEdges/EK_avg_5_present.vtk
+  RealEdges/Sobel_avg_5_tree.vtk RealEdges/EK_avg_5_tree.vtk
+  RealEdges/Sobel_avg_5_beetle.vtk RealEdges/EK_avg_5_beetle.vtk
+and visualizing a slice.
+But, as the images are big, it is convenient first to slice the image
+and then load just the slice.
+
+Figure 11:
+This shows the running times on the synthetic images.
+Enter directory
+SyntTimes/
+and run
+python3 plot_times.py
+
+Table I:
+This shows the running times on the real images.
+Enter directory
+RealTimes/
+and run
+python3 print_times.py
