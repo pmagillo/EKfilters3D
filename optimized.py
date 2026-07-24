@@ -133,7 +133,7 @@ def print_instructions():
 
 if __name__=="__main__":
   import sys
-  args = sys.argv
+  args = sys.argv[:]
   try:
     if "NOOUT" in args: args.remove("NOOUT")
     assert len(args)==3
