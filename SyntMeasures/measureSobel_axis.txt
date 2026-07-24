@@ -1,0 +1,72 @@
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk
+EXACT Precision: 0.3333333333333333
+EXACT Recall: 1.0
+D2 Precision: 0.6666666666666666
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 32 considered as 0)
+EXACT Precision: 0.3333333333333333
+EXACT Recall: 1.0
+D2 Precision: 0.6666666666666666
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 64 considered as 0)
+EXACT Precision: 0.3333333333333333
+EXACT Recall: 1.0
+D2 Precision: 0.6666666666666666
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 96 considered as 0)
+EXACT Precision: 0.3333333333333333
+EXACT Recall: 1.0
+D2 Precision: 0.6666666666666666
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 128 considered as 0)
+EXACT Precision: 0.5
+EXACT Recall: 1.0
+D2 Precision: 1.0
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 160 considered as 0)
+EXACT Precision: 0.5
+EXACT Recall: 1.0
+D2 Precision: 1.0
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 192 considered as 0)
+EXACT Precision: 0.5
+EXACT Recall: 1.0
+D2 Precision: 1.0
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/Sobel_avg_5_axis.vtk (values<= 224 considered as 0)
+EXACT Precision: 0.5
+EXACT Recall: 1.0
+D2 Precision: 1.0
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0

@@ -1,0 +1,72 @@
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk
+EXACT Precision: 0.03981781005859375
+EXACT Recall: 1.0
+D2 Precision: 0.07963180541992188
+D2 Recall: 1.0
+D3 Precision: 0.1211700439453125
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 32 considered as 0)
+EXACT Precision: 0.12107082376412184
+EXACT Recall: 1.0
+D2 Precision: 0.2421300484840049
+D2 Recall: 1.0
+D3 Precision: 0.3681884612707913
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 64 considered as 0)
+EXACT Precision: 0.3104514900957706
+EXACT Recall: 1.0
+D2 Precision: 0.6195348283861757
+D2 Recall: 1.0
+D3 Precision: 0.9205579679971447
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 96 considered as 0)
+EXACT Precision: 0.3788865049638169
+EXACT Recall: 0.9981797279172255
+D2 Precision: 0.748972689915997
+D2 Recall: 0.9981797279172255
+D3 Precision: 0.9945452561911342
+D3 Recall: 0.9981797279172255
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 128 considered as 0)
+EXACT Precision: 0.4650429134771515
+EXACT Recall: 0.9603372293542825
+D2 Precision: 0.9100440733008582
+D2 Recall: 0.9603372293542825
+D3 Precision: 0.9999536070517281
+D3 Recall: 0.9603372293542825
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 160 considered as 0)
+EXACT Precision: 0.6195105370496261
+EXACT Recall: 0.8730599731749378
+D2 Precision: 0.9932019034670292
+D2 Recall: 0.8730599731749378
+D3 Precision: 1.0
+D3 Recall: 0.8730599731749378
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 192 considered as 0)
+EXACT Precision: 0.8730808597748209
+EXACT Recall: 0.40860318068595514
+D2 Precision: 1.0
+D2 Recall: 0.40860318068595514
+D3 Precision: 1.0
+D3 Recall: 0.40860318068595514
+============ F measure ============
+Ideal image  SyntEdges/ideal_sphere.vtk
+Computed image SyntEdges/EK_avg_5_noisy_sphere_064.vtk (values<= 224 considered as 0)
+EXACT Precision: 0.9595588235294118
+EXACT Recall: 0.02500479018969151
+D2 Precision: 1.0
+D2 Recall: 0.02500479018969151
+D3 Precision: 1.0
+D3 Recall: 0.02500479018969151

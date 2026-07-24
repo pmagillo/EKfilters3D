@@ -1,0 +1,72 @@
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk
+EXACT Precision: 0.11398040961709706
+EXACT Recall: 1.0
+D2 Precision: 0.22788661323834966
+D2 Recall: 1.0
+D3 Precision: 0.4519516176907094
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 32 considered as 0)
+EXACT Precision: 0.17036379769299023
+EXACT Recall: 1.0
+D2 Precision: 0.34061668145519075
+D2 Recall: 1.0
+D3 Precision: 0.6755212954747116
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 64 considered as 0)
+EXACT Precision: 0.20510081452797435
+EXACT Recall: 1.0
+D2 Precision: 0.41006809987982373
+D2 Recall: 1.0
+D3 Precision: 0.8132594471892108
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 96 considered as 0)
+EXACT Precision: 0.2537584668759293
+EXACT Recall: 1.0
+D2 Precision: 0.5073517264166529
+D2 Recall: 1.0
+D3 Precision: 0.9923178589129358
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 128 considered as 0)
+EXACT Precision: 0.33297203555170174
+EXACT Recall: 1.0
+D2 Precision: 0.6657272924344244
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 160 considered as 0)
+EXACT Precision: 0.34358572866569737
+EXACT Recall: 1.0
+D2 Precision: 0.6772173134996086
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 192 considered as 0)
+EXACT Precision: 0.5073712108663243
+EXACT Recall: 0.9970703125
+D2 Precision: 0.9855888686433659
+D2 Recall: 0.9970703125
+D3 Precision: 1.0
+D3 Recall: 0.9970703125
+============ F measure ============
+Ideal image  SyntEdges/ideal_slanted.vtk
+Computed image SyntEdges/EK_avg_5_slanted.vtk (values<= 224 considered as 0)
+EXACT Precision: 0.5154465787377179
+EXACT Recall: 0.94775390625
+D2 Precision: 1.0
+D2 Recall: 0.94775390625
+D3 Precision: 1.0
+D3 Recall: 0.94775390625

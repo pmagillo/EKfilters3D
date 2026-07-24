@@ -1,0 +1,72 @@
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk
+EXACT Precision: 0.03125
+EXACT Recall: 1.0
+D2 Precision: 0.0625
+D2 Recall: 1.0
+D3 Precision: 0.09375
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 32 considered as 0)
+EXACT Precision: 0.0943713568186531
+EXACT Recall: 1.0
+D2 Precision: 0.1887427136373062
+D2 Recall: 1.0
+D3 Precision: 0.28311407045595927
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 64 considered as 0)
+EXACT Precision: 0.3268432812001277
+EXACT Recall: 1.0
+D2 Precision: 0.6536865624002554
+D2 Recall: 1.0
+D3 Precision: 0.9776970954356846
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 96 considered as 0)
+EXACT Precision: 0.37180592747242774
+EXACT Recall: 1.0
+D2 Precision: 0.7436118549448555
+D2 Recall: 1.0
+D3 Precision: 0.9998638406027323
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 128 considered as 0)
+EXACT Precision: 0.4849345882910081
+EXACT Recall: 1.0
+D2 Precision: 0.9698691765820162
+D2 Recall: 1.0
+D3 Precision: 1.0
+D3 Recall: 1.0
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 160 considered as 0)
+EXACT Precision: 0.5002144739260984
+EXACT Recall: 0.9964599609375
+D2 Precision: 1.0
+D2 Recall: 0.9964599609375
+D3 Precision: 1.0
+D3 Recall: 0.9964599609375
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 192 considered as 0)
+EXACT Precision: 0.5074269286056541
+EXACT Recall: 0.775634765625
+D2 Precision: 1.0
+D2 Recall: 0.775634765625
+D3 Precision: 1.0
+D3 Recall: 0.775634765625
+============ F measure ============
+Ideal image  SyntEdges/ideal_axis.vtk
+Computed image SyntEdges/EK_avg_5_noisy_axis_064.vtk (values<= 224 considered as 0)
+EXACT Precision: 0.5005347593582887
+EXACT Recall: 0.1142578125
+D2 Precision: 1.0
+D2 Recall: 0.1142578125
+D3 Precision: 1.0
+D3 Recall: 0.1142578125
