@@ -1,0 +1,39 @@
+# =========================================================
+# Compute precision and recall on the edge surfaces
+# computed by using Sobel and EK filters from synthetic
+# images, comparing them with the ideal edge surfaces.
+#
+# The results of running this script are already present
+# in directory SyntMeasures, so it is not necessary to 
+# run it.
+#
+# If you want to run this script, you should first place it
+# in the parent directory, where the python programs are.
+# =========================================================
+
+P="SyntEdges/"
+Q="SyntEdges/ideal_"
+R="measure"
+
+for S in {"axis","slanted","sphere"}
+do 
+  echo ""
+  echo "==== Precision and Recall for edge images of "$S
+  for M in {"Sobel","EK"}
+  do 
+    # clean (smoothed) image
+    F=$P$M"_avg_5_"$S".vtk"
+    G=$R$M"_"$S".txt"
+    python3 precision_recall.py $Q$S".vtk" $F 0 32 64 96 128 160 192 224 > $G
+    # noisy (smoothed) images
+    for N in {"16","32","64"}
+    do
+      F=$P$M"_avg_5_noisy_"$S"_0"$N".vtk"
+      G=$R$M"_noisy_"$S"_0"$N".txt"
+      python3 precision_recall.py $Q$S".vtk" $F 0 32 64 96 128 160 192 224 > $G
+    done
+  done
+done
+
+# =========================================================
+
