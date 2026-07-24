@@ -1,0 +1,4 @@
+This directory contains the precision and recall measures of the computed edge surfaces from the 
+synthetic test images with Sobel and EK filters, with respect to the ideal edge surfaces (ground truth).
+
+The program  Fmeasure_plot.py   is provided to visually present such data.
